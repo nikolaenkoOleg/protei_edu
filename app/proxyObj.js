@@ -13,11 +13,11 @@ const store = {}
 
 const proxyStore = new Proxy(store, {
   set(target, prop, value) {
-    console.log(`Set property= '${prop}' with value= ${value}`)
+    console.log(`Set property = '${prop}' with value = ${value}`)
     return true
   }
 })
 
-proxyStore.ids = [1, 2] // Set property= 'ids' with value= 1,2
-proxyStore.dates = [new Date, new Date()] // dates' with value= Sun Mar 24 2024 20:29:15 GMT+0300 (Москва, стандартное время),Sun Mar 24 2024 20:29:15 GMT+0300 (Москва, стандартное время)
+proxyStore.ids = [1, 2] // Set property = 'ids' with value= 1,2
+proxyStore.dates = [new Date, new Date()] // Set property = dates' with value = Sun Mar 24 2024 20:29:15 GMT+0300 (Москва, стандартное время),Sun Mar 24 2024 20:29:15 GMT+0300 (Москва, стандартное время)
 

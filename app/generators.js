@@ -64,5 +64,5 @@ function* quizPlease() {
 }
 
 const gen = quizPlease()
-gen.next() // первый
+gen.next() // первый next не принимает значение, а выводит вопрос
 gen.next(4)
